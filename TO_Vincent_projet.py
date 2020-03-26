@@ -41,19 +41,19 @@ class MinimalChain():
             if not self.blocks[i].verify():
                 flag = False
                 if verbose:
-                    print(f'Wrong data type(s) at block {i}.')
+                    print(f'Type(s) de données incorrect(s) au bloc {i}.')
             if self.blocks[i].index != i:
                 flag = False
                 if verbose:
-                    print(f'Wrong block index at block {i}.')
+                    print(f'Index de bloc incorrect au bloc {i}.')
             if self.blocks[i-1].hash != self.blocks[i].previous_hash:
                 flag = False
                 if verbose:
-                    print(f'Wrong previous hash at block {i}.')
+                    print(f'Hash précédent incorrect au bloc {i}.')
             if self.blocks[i].hash != self.blocks[i].hashing():
                 flag = False
                 if verbose:
-                    print(f'Wrong hash at block {i}.')
+                    print(f'Hash incorrect au bloc {i}.')
             if self.blocks[i-1].timestamp >= self.blocks[i].timestamp:
                 flag = False
                 if verbose:
