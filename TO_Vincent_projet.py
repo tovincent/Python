@@ -41,7 +41,7 @@ class MinimalChain():
             if not self.blocks[i].verify():
                 flag = False
                 if verbose:
-                    print(f'Type(s) de données incorrect(s) au bloc {i}.')
+                    print(f'Type de données incorrect au bloc {i}.')
             if self.blocks[i].index != i:
                 flag = False
                 if verbose:
@@ -57,7 +57,7 @@ class MinimalChain():
             if self.blocks[i-1].timestamp >= self.blocks[i].timestamp:
                 flag = False
                 if verbose:
-                    print(f'Backdating at block {i}.')
+                    print(f'Date antérieure à la vraie date au bloc {i}.')
         return flag
     
     def fork(self, head='latest'):
@@ -107,7 +107,7 @@ class MinimalBlock():
 
 # Test de la chaîne
 c = MinimalChain() # Démarrage de la chaîne
-for i in range(1,20+1):
+for i in range(1,21):
     c.add_block(f'Ceci est le bloc {i} de ma première chaîne.')
 
 print(c.blocks[3].timestamp)
