@@ -57,7 +57,7 @@ class MinimalChain():
             if self.blocks[i-1].timestamp >= self.blocks[i].timestamp:
                 flag = False
                 if verbose:
-                    print(f'Date antérieure à la vraie date au bloc {i}.')
+                    print(f'Vérification de la date antérieure à la vraie date au bloc {i}.')
         return flag
     
     def fork(self, head='latest'):
