@@ -191,7 +191,14 @@ ville_nom_pays = {"Paris":"France",
                   "Moscou":"Russie"}
 
 #Question 10
-
+class Pays:
+    visa = False
+    
+    def __init__(self, nom, visa):
+        self.nom = nom
+        self.visa = visa
+        if nom == "France":
+            visa = True
 
 
       
