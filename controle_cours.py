@@ -173,16 +173,6 @@ def tri_et_inverse(liste):
 
 
 #Question 8
-def aller_a_paris(input_call=input):
-    # code a remplir
-
-    # quelque part dans le code de cette fonction: saisie = input_call('Question ')
-    # en fonction de saisie on continue a demander ou on renvoie 'Paris'
-    # Au lieu d'utiliser input comme en cours vous appelez input_call
-    # par défaut elle vaut input donc vous pouvez appeller
-    # aller_a_paris() pour tester a la main
-    while True:
-        return 0, 'Nulle Part'
 
 #Question 9
 ville_nom_pays = {"Paris":"France",
