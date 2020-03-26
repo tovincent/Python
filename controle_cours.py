@@ -173,16 +173,20 @@ def tri_et_inverse(liste):
 
 
 #Question 8
-def aller_a_paris(input_call=input):
-    # code a remplir
+class fake_input:
+    def __init__(self, saisies):
+        self._iter = iter(saisies)
+    def __call__(self, *args, **kwargs):
+        return next(self._iter)
 
-    # quelque part dans le code de cette fonction: saisie = input_call('Question ')
-    # en fonction de saisie on continue a demander ou on renvoie 'Paris'
-    # Au lieu d'utiliser input comme en cours vous appelez input_call
-    # par dÃ©faut elle vaut input donc vous pouvez appeller
-    # aller_a_paris() pour tester a la main
+def aller_a_paris(input_call=input):
+    p = 0
     while True:
-        return 0, 'Nulle Part'
+        p +=1
+        if input_call.lower()=='Paris':
+            return False
+        return p, 'Paris'
+aller_a_paris(input_call=fake_input(['Barcelone', 'Paris']))
 
 #Question 9
 ville_nom_pays = {"Paris":"France",
