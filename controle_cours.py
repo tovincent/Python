@@ -167,17 +167,12 @@ def extremites(l):
 
 
 #Question 7
+def tri_et_inverse(liste):
+    li = liste[::-1]
+    return li
 
 
 #Question 8
-
-
-#Question 9
-
-
-#Question 10
-
-
 def aller_a_paris(input_call=input):
     # code a remplir
 
@@ -188,6 +183,17 @@ def aller_a_paris(input_call=input):
     # aller_a_paris() pour tester a la main
     while True:
         return 0, 'Nulle Part'
+
+#Question 9
+ville_nom_pays = {"Paris":"France",
+                  "Berlin":"Allemagne",
+                  "Madrid":"Espagne",
+                  "Moscou":"Russie"}
+
+#Question 10
+
+
+
       
 if __name__ == "__main__":
     import doctest
